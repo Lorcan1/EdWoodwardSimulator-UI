@@ -1,18 +1,137 @@
-<div class="filters">
-    <mat-form-field>
-      <mat-label>Sort</mat-label>
-      <mat-select
-        panelClass="sort-select"
-        [(ngModel)]="sort"
-      >
-        <mat-option value="name">Name</mat-option>
-        <mat-option value="-released">Released</mat-option>
-        <mat-option value="-added">Added</mat-option>
-        <mat-option value="-created">Created</mat-option>
-        <mat-option value="-updated">Updated</mat-option>
-        <mat-option value="-rating">Rating</mat-option>
-        <mat-option value="metacritic">Metacritic</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  
+<style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-p8sp{border-color:inherit;font-size:20px;text-align:center;vertical-align:top}
+  .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-eqm3{border-color:inherit;font-size:20px;text-align:left;vertical-align:top}
+  .tg .tg-0lax{text-align:left;vertical-align:top}
+  </style>
+  <table class="tg">
+  <thead>
+    <tr>
+      <th class="tg-p8sp"><span style="font-weight:bold">Technical</span></th>
+      <th class="tg-0pky"></th>
+      <th class="tg-eqm3"><span style="font-weight:bold">Mental</span></th>
+      <th class="tg-0lax"></th>
+      <th class="tg-p8sp"><span style="font-weight:bold">Physical</span></th>
+      <th class="tg-0lax"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-0pky">Corners                            </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Aggession</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Acceleration</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky"> Crossing       </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Anticipation</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Agility</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Dribbling  </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Bravery                            </td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Balance                           </td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Finishing </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Composure</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Jumping Reach</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">First Touch</td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Concentration</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Natural Fitness</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Free Kick Taking </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Decisions </td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Pace</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Heading </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Determination</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Stamina </td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Long Shots </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Flair</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky">Strength</td>
+      <td class="tg-0lax">1</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Long Throws </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Leadership</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Marking </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Off the Ball </td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Passing </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Positioning </td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Penalty Taking </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Teamwork</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Tackling </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Vision</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">Technique </td>
+      <td class="tg-0pky">1</td>
+      <td class="tg-0pky">Work Rate</td>
+      <td class="tg-0lax">1</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0lax"></td>
+    </tr>
+  </tbody>
+  </table>
