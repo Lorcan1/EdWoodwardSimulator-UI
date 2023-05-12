@@ -15,13 +15,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
+import { ClubPlayersComponent } from './components/club-players/club-players.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    ClubPlayersComponent
   ],
   imports: [
     BrowserModule,

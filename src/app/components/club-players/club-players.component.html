@@ -1,0 +1,29 @@
+<p>club-players works!</p>
+<div>{{data.firstName}} {{data.lastName}} {{data.age}}</div>
+<a class="link" href="player/{{data.id}}">{{data.firstName}} {{data.lastName}} {{data.age}}</a>
+<br>
+<a class="link" href="player/29179241">Erling Haaland 22</a>
+
+<div class="container mt-5">
+   
+    <h2>Angular Display Data from Json File Example</h2>
+     
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of data">
+          <td><a class="link" href="player/{{ player.id }}">{{ player.id }}</a></td>
+          <td>{{ player.firstName }}</td>
+          <td>{{ player.lastName }}</td>
+          <td>{{ player.age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
