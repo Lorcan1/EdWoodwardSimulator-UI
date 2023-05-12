@@ -1,27 +1,35 @@
-<p>club-players works!</p>
+<!-- <p>club-players works!</p>
 <div>{{data.firstName}} {{data.lastName}} {{data.age}}</div>
 <a class="link" href="player/{{data.id}}">{{data.firstName}} {{data.lastName}} {{data.age}}</a>
 <br>
-<a class="link" href="player/29179241">Erling Haaland 22</a>
+<a class="link" href="player/29179241">Erling Haaland 22</a> -->
+
+<div class="search-container">
+    <span>Search</span>
+    <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
+</div>
 
 <div class="container mt-5">
-   
-    <h2>Angular Display Data from Json File Example</h2>
+    <h2>Manchester City</h2>
      
-    <table class="table table-striped">
+    <table class="players">
       <thead>
           <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
+            <th>Country</th>
+            <th>Position</th>
+            <th>Overall</th>
+            <th>Age</th>
           </tr>
       </thead>
       <tbody>
         <tr *ngFor="let player of data">
           <td><a class="link" href="player/{{ player.id }}">{{ player.id }}</a></td>
-          <td>{{ player.firstName }}</td>
-          <td>{{ player.lastName }}</td>
+          <td><img src={{player.imageUrl}} class = "logo">{{ player.firstName }} {{ player.lastName }}</td>
+          <td><img src={{player.countryUrl}} class = "country"></td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.overall }}</td>
           <td>{{ player.age }}</td>
         </tr>
       </tbody>

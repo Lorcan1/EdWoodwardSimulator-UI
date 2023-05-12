@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -18,6 +18,17 @@ export class ClubPlayersComponent implements OnInit {
       this.data = res
       console.log(this.data)
     })
-
 }
+
+enteredSearchValue: string  = '';
+
+@Output()
+searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+onSearchTextChanged(){
+  this.searchTextChanged.emit(this.enteredSearchValue);
+  console.log(this.enteredSearchValue)
+}
+
+
 }

@@ -100,13 +100,27 @@
   position: relative;
   // display: inline;
   top :80px;
-  left: 5px;
+  left: 30px;
   font-size: large;
 
 }
 
 .country{
   top:90px;
+}
+
+.country_img{
+  width:20px;
+  position: relative;
+  top: 60px;
+  // left:80px;
+  
+}
+
+.club_img{
+  position: relative;
+  left:-151px;
+  top:5px;
 }
 
 .personal{
