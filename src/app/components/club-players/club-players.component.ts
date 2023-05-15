@@ -1,5 +1,7 @@
 import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from '@angular/router';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-club-players',
@@ -9,16 +11,19 @@ import { HttpClient } from "@angular/common/http";
 export class ClubPlayersComponent implements OnInit {
   public data:any = []
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private route: ActivatedRoute,private router: Router) { }
 
 
   ngOnInit(){
-    const url ='http://localhost:8080/get-all-players'
+    this.route.params.subscribe(params => {
+    const club = params['club'];
+    const url ='http://localhost:8080/get-all-players?club='+ club;
     this.http.get(url).subscribe((res)=>{
       this.data = res
-      console.log(this.data)
+      console.log(url)
     })
-}
+})}
+
 
 enteredSearchValue: string  = '';
 

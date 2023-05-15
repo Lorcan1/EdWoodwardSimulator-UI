@@ -17,6 +17,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HomeComponent } from './components/home/home.component';
 import { ClubPlayersComponent } from './components/club-players/club-players.component';
 import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
+import { LeagueComponent } from './league/league.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
     SearchBarComponent,
     HomeComponent,
     ClubPlayersComponent,
-    GoalkeeperComponent
+    GoalkeeperComponent,
+    LeagueComponent
   ],
   imports: [
     BrowserModule,

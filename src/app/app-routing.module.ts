@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { ClubPlayersComponent } from './components/club-players/club-players.component';
 import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
+import { LeagueComponent } from './league/league.component';
 
 
 
@@ -23,6 +24,14 @@ const routes: Routes = [
   {
     path: 'goalkeeper/:id',
     component: GoalkeeperComponent,
+  },
+  {
+    path: 'leagueNamePlaceholder',
+    component: LeagueComponent,
+  },
+  {
+    path: 'club/:club',
+    component: ClubPlayersComponent,
   },
 ];
 
