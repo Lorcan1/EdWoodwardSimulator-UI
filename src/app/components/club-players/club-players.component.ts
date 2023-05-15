@@ -13,7 +13,7 @@ export class ClubPlayersComponent implements OnInit {
 
 
   ngOnInit(){
-    const url ='http://localhost:8080/get-players'
+    const url ='http://localhost:8080/get-all-players'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       console.log(this.data)

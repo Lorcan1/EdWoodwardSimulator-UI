@@ -1,0 +1,247 @@
+<div class = "example">
+    <img src={{data.imageUrl}} class = "logo">
+    <!-- <div class = "example">Hello this is the example</div> -->
+    <!-- {{data.firstName}} {{data.lastName}} This is the example textttttttttttttttt
+    </div>
+    <div class="overall">
+      {{data.overall}}
+    </div> -->
+    
+      <!-- <div class = "potential">
+        {{data.potential}}
+      </div> -->
+    <div class = "headerclass">
+    <div class = "name">
+      {{data.firstName}} {{data.lastName}}
+    </div>
+    <div class="overall">
+    {{data.overall}}
+    </div>
+    <div class = "potential">
+      {{data.potential}}
+    </div>
+    <div class = "club"><a class="link" href="club-players">{{data.club}}</a>
+    <img src={{data.clubUrl}} class = "club_img">
+    </div>
+    
+    <div class = "country">{{data.nation}}</div>
+    <img src={{data.countryUrl}} class = "country_img">
+    </div>
+    
+    
+    <div class = "personal">
+      <table class="personal">
+        <thead>
+          <tr>
+            <th colspan="2">Personal Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First Name:</td>
+            <td>{{data.firstName}}</td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>{{data.lastName}}</td>
+          </tr>
+          <tr>
+            <td>Club</td>
+            <td>{{data.club}}</td>
+          </tr>
+          <tr>
+            <td>Nation </td>
+            <td>{{data.nation}}</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>{{data.age}}</td>
+          </tr>
+          <tr>
+            <td>Foot</td>
+            <td>{{data.foot}}</td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>{{data.height}}</td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td>{{data.weight}}</td>
+          </tr>
+          <tr>
+            <td>Int Caps</td>
+            <td>{{data.intCaps}}</td>
+          </tr>
+          <tr>
+            <td>Int Goals</td>
+            <td>{{data.intGoals}}</td>
+          </tr>
+          <tr>
+            <td>Id </td>
+            <td>{{data.id}}</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+        <!--<table>
+          <thead>
+            <tr>
+              <th colspan="2">Contract</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sell Value</td>
+              <td>{{data.sellValue}}</td>
+            </tr>
+            <tr>
+              <td>Wages</td>
+              <td>{{data.wages}}</td>
+            </tr>
+            <tr>
+              <td>Contract End</td>
+              <td>{{data.contractEnd}}</td>
+            </tr>
+          </tbody>
+          </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Overall</th>
+              <th>{{data.overall}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Potential</td>
+              <td>{{data.potential}}</td>
+            </tr>
+          </tbody>
+          </table> -->
+      <table id="attributes">
+      <thead >
+        <tr>
+          <th class="tg-p8sp"><span style="font-weight:bold">GoalKeeping</span></th>
+          <th class="tg-0pky"></th>
+          <th class="tg-eqm3"><span style="font-weight:bold">Mental</span></th>
+          <th class="tg-0lax"></th>
+          <th class="tg-p8sp"><span style="font-weight:bold">Physical</span></th>
+          <th class="tg-0lax"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-0pky">Aerial Reach                            </td>
+          <td class="tg-0pky">{{data.aerialReach}}</td>
+          <td class="tg-0pky">Aggession</td>
+          <td class="tg-0lax">{{data.aggression}}</td>
+          <td class="tg-0pky">Acceleration</td>
+          <td class="tg-0lax">{{data.acceleration}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky"> Command of Area     </td>
+          <td class="tg-0pky">{{data.commandOfArea}}</td>
+          <td class="tg-0pky">Anticipation</td>
+          <td class="tg-0lax">{{data.anticipation}}</td>
+          <td class="tg-0pky">Agility</td>
+          <td class="tg-0lax">{{data.agility}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Communication  </td>
+          <td class="tg-0pky">{{data.communication}}</td>
+          <td class="tg-0pky">Bravery                            </td>
+          <td class="tg-0lax">{{data.bravery}}</td>
+          <td class="tg-0pky">Balance                           </td>
+          <td class="tg-0lax">{{data.balance}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Eccentricity </td>
+          <td class="tg-0pky">{{data.eccentricity}}</td>
+          <td class="tg-0pky">Composure</td>
+          <td class="tg-0lax">{{data.composure}}</td>
+          <td class="tg-0pky">Jumping Reach</td>
+          <td class="tg-0lax">{{data.jumpingReach}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">First Touch</td>
+          <td class="tg-0pky">{{data.firstTouch}}</td>
+          <td class="tg-0pky">Concentration</td>
+          <td class="tg-0lax">{{data.concentration}}</td>
+          <td class="tg-0pky">Natural Fitness</td>
+          <td class="tg-0lax">{{data.naturalFitness}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Handling </td>
+          <td class="tg-0pky">{{data.handling}}</td>
+          <td class="tg-0pky">Decisions </td>
+          <td class="tg-0lax">{{data.decisions}}</td>
+          <td class="tg-0pky">Pace</td>
+          <td class="tg-0lax">{{data.pace}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Kicking </td>
+          <td class="tg-0pky">{{data.kicking}}</td>
+          <td class="tg-0pky">Determination</td>
+          <td class="tg-0lax">{{data.determination}}</td>
+          <td class="tg-0pky">Stamina </td>
+          <td class="tg-0lax">{{data.stamina}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">One on Ones </td>
+          <td class="tg-0pky">{{data.oneOnOnes}}</td>
+          <td class="tg-0pky">Flair</td>
+          <td class="tg-0lax">{{data.flair}}</td>
+          <td class="tg-0pky">Strength</td>
+          <td class="tg-0lax">{{data.strength}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Passing </td>
+          <td class="tg-0pky">{{data.passing}}</td>
+          <td class="tg-0pky">Leadership</td>
+          <td class="tg-0lax">{{data.leadership}}</td>
+          <td class="tg-0pky"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Punching (Tendency)</td>
+          <td class="tg-0pky">{{data.punchingTendency}}</td>
+          <td class="tg-0pky">Off the Ball </td>
+          <td class="tg-0lax">{{data.offTheBall}}</td>
+          <td class="tg-0pky"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Reflexes </td>
+          <td class="tg-0pky">{{data.reflexes}}</td>
+          <td class="tg-0pky">Positioning </td>
+          <td class="tg-0lax">{{data.positioning}}</td>
+          <td class="tg-0pky">Free Kick Taking</td>
+          <td class="tg-0lax">{{data.freeKickTaking}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Rushing Out (Tendency) </td>
+          <td class="tg-0pky">{{data.rushingOut}}</td>
+          <td class="tg-0pky">Teamwork</td>
+          <td class="tg-0lax">{{data.teamwork}}</td>
+          <td class="tg-0pky">Penalty Taking</td>
+          <td class="tg-0lax">{{data.penaltyTaking}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Throwing </td>
+          <td class="tg-0pky">{{data.throwing}}</td>
+          <td class="tg-0pky">Vision</td>
+          <td class="tg-0lax">{{data.vision}}</td>
+          <td class="tg-0pky">Technique</td>
+          <td class="tg-0lax">{{data.technique}}</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky"></td>
+          <td class="tg-0pky"></td>
+          <td class="tg-0pky">Work Rate</td>
+          <td class="tg-0lax">{{data.workRate}}</td>
+          <td class="tg-0pky"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+      </tbody>
+      </table>

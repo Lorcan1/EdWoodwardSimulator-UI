@@ -25,7 +25,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let player of data">
-          <td><a class="link" href="player/{{ player.id }}">{{ player.id }}</a></td>
+          <td><a class="link" href="{{player.playerOrGoalkeeper}}/{{ player.id }}">{{ player.id }}</a></td>
           <td><img src={{player.imageUrl}} class = "logo">{{ player.firstName }} {{ player.lastName }}</td>
           <td><img src={{player.countryUrl}} class = "country"></td>
           <td>{{ player.position }}</td>

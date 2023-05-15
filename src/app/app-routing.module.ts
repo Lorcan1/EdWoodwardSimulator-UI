@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { ClubPlayersComponent } from './components/club-players/club-players.component';
+import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
 
 
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'player/:id',
     component: HomeComponent,
+  },
+  {
+    path: 'goalkeeper/:id',
+    component: GoalkeeperComponent,
   },
 ];
 
