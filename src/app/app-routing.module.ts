@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ClubPlayersComponent } from './components/club-players/club-players.component';
 import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
 import { LeagueComponent } from './league/league.component';
+import { MatchComponent } from './match/match.component';
 
 
 
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'club/:club',
     component: ClubPlayersComponent,
+  },
+  {
+    path: 'match',
+    component: MatchComponent,
   },
 ];
 

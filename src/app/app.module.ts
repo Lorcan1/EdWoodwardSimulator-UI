@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ClubPlayersComponent } from './components/club-players/club-players.component';
 import { GoalkeeperComponent } from './goalkeeper/goalkeeper.component';
 import { LeagueComponent } from './league/league.component';
+import { MatchComponent } from './match/match.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LeagueComponent } from './league/league.component';
     HomeComponent,
     ClubPlayersComponent,
     GoalkeeperComponent,
-    LeagueComponent
+    LeagueComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule,

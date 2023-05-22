@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Names</th>
+    <th>Potential</th>
+  </tr>
+    <tr *ngFor="let player of homeTeam">
+      <td>{{player.startingPosition}}</td>
+      <td>{{player.lastName}}</td>
+      <td>{{player.potential}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>Position</th>
+      <th>Names</th>
+      <th>Potential</th>
+    </tr>
+      <tr *ngFor="let player of awayTeam">
+        <td>{{player.startingPosition}}</td>
+        <td>{{player.lastName}}</td>
+        <td>{{player.potential}}</td>
+      </tr>
+    </table>
