@@ -22,9 +22,22 @@ export class MatchComponent implements OnInit {
     'ML':9,
     'ST':10
   };
+  public result:any = ""
+
+
+    
+    
   
 
   constructor(private http: HttpClient) { }
+
+  getAll() {
+    const resultUrl ='http://localhost:8080/return-result'
+    this.http.get(resultUrl,{responseType: 'text'}).subscribe((res)=>{
+      // this.data = Object.values(res)
+      this.result = res
+      console.log(this.homeTeam)
+  })}
 
   ngOnInit(): void {
     const homeUrl ='http://localhost:8080/get-positions?club=MCFC';
