@@ -33,7 +33,7 @@ export class MatchComponent implements OnInit {
 
   getAll() {
     const resultUrl ='http://localhost:8080/return-result'
-    this.http.get(resultUrl,{responseType: 'text'}).subscribe((res)=>{
+    this.http.get(resultUrl).subscribe((res)=>{
       // this.data = Object.values(res)
       this.result = res
       console.log(this.homeTeam)
