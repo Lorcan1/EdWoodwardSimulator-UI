@@ -27,12 +27,19 @@
     </table>
   </div>
 
+  <div class = playanddisplay>
+
   <div class = button>
   <button (click)="getAll()" mat-fab extended>
     <mat-icon>Play</mat-icon>
   </button>
+</div>
+<div class = result>
   <div> {{result.score}}</div>
-  <div> {{result.homeScorers}}</div>
-  <div> {{result.awayScorers}}</div>
- 
+</div>
+
+<div class = scorers>
+  <div class = homescorers> {{result.homeScorers}}</div>  <div class = awayscorers> {{result.awayScorers}}</div>
+</div>
+
 </div>
