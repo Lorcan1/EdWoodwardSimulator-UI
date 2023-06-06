@@ -23,6 +23,7 @@ export class MatchComponent implements OnInit {
     'ST':10
   };
   public result:any = ""
+  public homeScorers:String[]
 
 
     
@@ -36,8 +37,10 @@ export class MatchComponent implements OnInit {
     this.http.get(resultUrl).subscribe((res)=>{
       // this.data = Object.values(res)
       this.result = res
-      console.log(this.homeTeam)
-  })}
+      this.homeScorers= this.result.homeScorers
+
+    });
+  }
 
   ngOnInit(): void {
     const homeUrl ='http://localhost:8080/get-positions?club=MCFC';

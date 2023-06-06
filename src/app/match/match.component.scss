@@ -42,11 +42,11 @@
   .scorers{
     // border-style: solid;  
     // border-color: red;
-    display: flex;
+    display: flex;  //this puts the items in the middle
+    flex-wrap: wrap;
     justify-content: center;
     // align-items: flex-end;
     // clear: both;
-    // display: flex;
     // justify-content: center;
     // align-items: center;
     // overflow: hidden;
@@ -72,3 +72,8 @@
     position:relative;
     top:150px;
   }
+
+  .football {
+    width: 17px;
+    height: auto;
+}

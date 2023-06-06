@@ -39,7 +39,13 @@
 </div>
 
 <div class = scorers>
-  <div class = homescorers> {{result.homeScorers}}</div>  <div class = awayscorers> {{result.awayScorers}}</div>
+  <div *ngFor="let scorer of homeScorers"> {{scorer}}<img class = football *ngIf="(result.homeScorers) != ''" [src]="'/assets/football.png'"/><br></div>
+  <div *ngFor="let scorer of result.awayScorers"> {{scorer}}<img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/><br></div>
+
+  <!-- <div class = homescorers> {{result.homeScorers}} <img class = football *ngIf="(result.homeScorers) != ''" [src]="'/assets/football.png'"/></div>
+    <div class = awayscorers> {{result.awayScorers}}<img class = football *ngIf="(result.awayScorers)!= ''" [src]="'/assets/football.png'"/></div> -->
+  
+  <!-- <div ng-if="!item.photo"> show if photo is empty</div> -->
 </div>
 
 </div>
