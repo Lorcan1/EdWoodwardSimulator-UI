@@ -25,9 +25,31 @@ export class MatchComponent implements OnInit {
   public result:any = ""
   public homeScorers:String[]
 
+  countOccurrences(list: any[]): any[] {
+    console.log("List:",list)
+    return list.filter(item => {
+      const count = list.filter(existingItem => existingItem === item).length;
+      return { [item]: count };
+    });
+  }
+  countOccurrences2(list: any[]): Map<String,Number> {
+    var map1 = new Map();
+    for(var value of list) {
+        let counter = 0
+        let target = value
+    for (value of list) {
+      if (value == target) {
+            counter++;
+            map1.set(target, counter)
+        }
+    }
+    }
+    console.log("Map",map1)
 
+    return map1;
+  }
     
-    
+
   
 
   constructor(private http: HttpClient) { }
@@ -41,6 +63,7 @@ export class MatchComponent implements OnInit {
 
     });
   }
+
 
   ngOnInit(): void {
     const homeUrl ='http://localhost:8080/get-positions?club=MCFC';

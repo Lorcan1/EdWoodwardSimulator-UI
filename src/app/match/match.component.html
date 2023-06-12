@@ -38,14 +38,51 @@
   <div> {{result.score}}</div>
 </div>
 
-<div class = scorers>
-  <div *ngFor="let scorer of homeScorers"> {{scorer}}<img class = football *ngIf="(result.homeScorers) != ''" [src]="'/assets/football.png'"/><br></div>
-  <div *ngFor="let scorer of result.awayScorers"> {{scorer}}<img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/><br></div>
 
-  <!-- <div class = homescorers> {{result.homeScorers}} <img class = football *ngIf="(result.homeScorers) != ''" [src]="'/assets/football.png'"/></div>
-    <div class = awayscorers> {{result.awayScorers}}<img class = football *ngIf="(result.awayScorers)!= ''" [src]="'/assets/football.png'"/></div> -->
-  
-  <!-- <div ng-if="!item.photo"> show if photo is empty</div> -->
+  <div class = scorers>
+
+    <!-- <div class = homescorers *ngFor="let scorer of homeScorers"> {{scorer}}<img class = football *ngIf="(result.homeScorers) != ''" [src]="'/assets/football.png'"/></div>
+ 
+  <div div class = awayscorers *ngFor="let scorer of result.awayScorers">
+     {{scorer}}<img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/>
+     </div> -->
+
+
+     <ul class="homescorers">
+      <li *ngFor="let scorer of homeScorers" >
+          {{scorer}}
+          <img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/>
+      </li>
+    </ul>
+    <ul class="awayscorers">
+      <li *ngFor="let scorer of result.awayScorers" >
+        {{scorer}}
+        <img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/>
+      </li>
+    </ul>
+
+
+
 </div>
 
+<!-- <ul>
+  <li *ngFor="let itemCount of countOccurrences2(result.awayScorers) | keyvalue">
+    {{itemCount.key}} {{itemCount.value}}
+    <div *ngFor="let image of itemCount.value">
+      <img class = football *ngIf="(result.awayScorers) != ''" [src]="'/assets/football.png'"/>
+    </div>
+  </li>
+</ul> -->
+
+
+<!-- <div *ngFor="let image of countOccurrences2(homeScorers) | keyvalue, let i = index">
+  {{image.key}}
+  {{i}}
+  <img ng-repeat="p in range(day.pomosDone) track by $index" src='/img/pomodoro.png'>
+  ng-repeat='(key, value) -->
+  <!-- <img class = football [src]="'/assets/football.png'" *ngIf="i < image.value" /> -->
+<!-- </div> -->
+
+
 </div>
+

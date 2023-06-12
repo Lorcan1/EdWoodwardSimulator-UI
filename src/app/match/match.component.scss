@@ -43,30 +43,56 @@
     // border-style: solid;  
     // border-color: red;
     display: flex;  //this puts the items in the middle
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
-    // align-items: flex-end;
-    // clear: both;
-    // justify-content: center;
-    // align-items: center;
-    // overflow: hidden;
-    white-space: nowrap;
+    // // align-items: flex-end;
+    // // clear: both;
+    // // justify-content: center;
+    // // align-items: center;
+    // // overflow: hidden;
+    // white-space: wrap;
     // text-align: center;
-    height: 20x;
+    // display: flex;  
+    // flex-direction: wrap;
+    // height: 20x;
   }
 
   .homescorers{  
-    position:relative;
-    right:40px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content:  center;
+    // white-space: nowrap;
+    // position:relative;
+    // right:100px;
+    // border: 3px solid green;
+    padding: 1;
+
+    // width:10%;
   }
 
   .awayscorers{
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content:  center;
+    // white-space: nowrap;
     
-    position: relative;
-    left: 40px;
+    // position: relative;
+    // left: 100px;
+    // border: 3px solid green;
+    // padding: 1;
+    // width:10%;
     // clear: right;
   }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: inline-block;
+    *display: inline;
+    
+}
   .playanddisplay{
     font-size: larger;
     position:relative;
