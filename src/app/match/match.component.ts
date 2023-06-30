@@ -7,6 +7,14 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./match.component.scss']
 })
 export class MatchComponent implements OnInit {
+  rows = [
+    {nom: "Son", team: "home", composants: ["15'", "30'"]}, 
+    {nom: "Kane", team: "home", composants: ["40'"]},
+    {nom: "Haaland", team: "away", composants: ["1'","60'","90+5'"]}
+];
+
+public scorers:any = []
+
   public homeTeam:any = []
   public awayTeam:any = []
   public ref = {
@@ -33,7 +41,7 @@ export class MatchComponent implements OnInit {
     });
   }
   countOccurrences2(list: any[]): Map<String,Number> {
-    var map1 = new Map();
+    let map1 = new Map();
     for(var value of list) {
         let counter = 0
         let target = value
@@ -46,7 +54,27 @@ export class MatchComponent implements OnInit {
     }
     console.log("Map",map1)
 
+    // this.createImageList(map1)
+
     return map1;
+  }
+
+  createImageList(playerMap: Map<String,Number>): Map<String,String[]> {
+    //[Son, imageurl,imageur]
+
+    let map1 = new Map<String,String[]>();
+    playerMap.forEach((value: number, key: String) => {
+      let imArray :String[] = new Array<string>(value)
+      imArray.fill("/assets/football.png")
+      map1.set(key,imArray)
+      
+
+  });
+  
+
+    console.log("createImageList",map1)
+    return map1;
+
   }
     
 
@@ -58,8 +86,9 @@ export class MatchComponent implements OnInit {
     const resultUrl ='http://localhost:8080/return-result'
     this.http.get(resultUrl).subscribe((res)=>{
       // this.data = Object.values(res)
-      this.result = res
-      this.homeScorers= this.result.homeScorers
+      this.scorers = res
+      console.log("scorers",this.scorers)
+      // this.homeScorers= this.result.homeScorers
 
     });
   }
