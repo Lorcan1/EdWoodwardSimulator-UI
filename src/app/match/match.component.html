@@ -34,14 +34,25 @@
     <mat-icon>Play</mat-icon>
   </button>
 </div>
-<div class = result>
-  <div> {{result.score}}</div>
+
+<!-- <div class="container">
+  <div class="left-scorer">{{scorers.homeTeam}} {{scorers.homeTeamScore}}</div>
+  <div class="center-scorer">-</div>
+  <div class="right-scorer">{{scorers.awayTeamScore}} {{scorers.awayTeam}}</div>
+</div> -->
+
+<div class="title2">
+  <div class="container2">
+      <div class = left2>{{scorers.homeTeam}} {{scorers.homeTeamScore}}</div>
+      <div class="center2">-</div>
+      <div class = right2>{{scorers.awayTeamScore}} {{scorers.awayTeam}}</div>
+  </div>
 </div>
 
 
-  <div class = scorers>
+<div class = scorers>
 <table class = "homescorers">
-  <tr *ngFor="let row of scorers">
+  <tr *ngFor="let row of scorers.Scorer">
     <div *ngIf="(row.team) =='home'">
            {{ row.name }} 
           {{ row.goals }}
@@ -50,8 +61,8 @@
       </tr>  
 </table>
 
-<table class = "awayScorers">
-  <tr *ngFor="let row of scorers">
+<table class = "awayscorers">
+  <tr *ngFor="let row of scorers.Scorer">
     <div  *ngIf="(row.team) =='away'">
           <td> {{ row.name }} </td>
           <td> {{ row.goals }}</td>
@@ -60,3 +71,19 @@
       </tr>  
 </table>
 </div>
+
+
+<!-- <div class="title">
+  <div class="center">
+      -
+      <div class="left">
+        {{scorers.homeTeam}} {{scorers.homeTeamScore}}
+      </div>
+      <div class="right">
+        {{scorers.awayTeamScore}} {{scorers.awayTeam}}
+      </div>
+  </div>
+  </div> -->
+
+
+

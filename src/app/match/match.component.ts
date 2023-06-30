@@ -13,7 +13,7 @@ export class MatchComponent implements OnInit {
     {nom: "Haaland", team: "away", composants: ["1'","60'","90+5'"]}
 ];
 
-public scorers:any = []
+public scorers:any = ""
 
   public homeTeam:any = []
   public awayTeam:any = []
@@ -30,55 +30,7 @@ public scorers:any = []
     'ML':9,
     'ST':10
   };
-  public result:any = ""
   public homeScorers:String[]
-
-  countOccurrences(list: any[]): any[] {
-    console.log("List:",list)
-    return list.filter(item => {
-      const count = list.filter(existingItem => existingItem === item).length;
-      return { [item]: count };
-    });
-  }
-  countOccurrences2(list: any[]): Map<String,Number> {
-    let map1 = new Map();
-    for(var value of list) {
-        let counter = 0
-        let target = value
-    for (value of list) {
-      if (value == target) {
-            counter++;
-            map1.set(target, counter)
-        }
-    }
-    }
-    console.log("Map",map1)
-
-    // this.createImageList(map1)
-
-    return map1;
-  }
-
-  createImageList(playerMap: Map<String,Number>): Map<String,String[]> {
-    //[Son, imageurl,imageur]
-
-    let map1 = new Map<String,String[]>();
-    playerMap.forEach((value: number, key: String) => {
-      let imArray :String[] = new Array<string>(value)
-      imArray.fill("/assets/football.png")
-      map1.set(key,imArray)
-      
-
-  });
-  
-
-    console.log("createImageList",map1)
-    return map1;
-
-  }
-    
-
-  
 
   constructor(private http: HttpClient) { }
 
@@ -92,7 +44,6 @@ public scorers:any = []
 
     });
   }
-
 
   ngOnInit(): void {
     const homeUrl ='http://localhost:8080/get-positions?club=MCFC';
