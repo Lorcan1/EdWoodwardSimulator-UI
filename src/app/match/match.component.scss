@@ -1,18 +1,24 @@
 .tables{
     position: relative;
     top: 50px;
-    font-size: larger;
+    // font-size: larger;
+    float: left,
+    // display: flex;
 }
 
 #homeTeam{
     
-    float: left;
-    left: 100px;
+    // float: left;
+    // left: 100px;
+    border: 2px solid red;
 }
 
 #awayTeam{
-    right: 100px;
-    float: right
+    // right: 100px;
+    // float: right
+    margin-top: 320px;
+    margin-left:-205px;
+    border: 2px solid red;
 }
 
 .button {
@@ -54,7 +60,7 @@
     // justify-content: center;
     margin-top:20px;
 
-    text-align: center;
+    // text-align: center;
 
   }
 
@@ -86,7 +92,7 @@ ul {
   .playanddisplay{
     font-size: larger;
     position:relative;
-    top:150px;
+    // top:150px;
   }
 
   .football {
@@ -132,6 +138,7 @@ ul {
 
 
 .title2 {
+    // bottom: 4000px;
     height: 30px;
     width: 600px;
     /* for example */
@@ -158,3 +165,7 @@ ul {
 .right2 {
     left: 100%;
 }
+
+// .title2{
+//     float: right;
+// }
