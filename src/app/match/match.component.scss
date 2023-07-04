@@ -1,12 +1,12 @@
 .tables{
-    position: relative;
-    top: 50px;
+    // position: relative;
+    // top: 50px;
     // font-size: larger;
-    float: left,
+    // float: left,
     // display: flex;
 }
 
-#homeTeam{
+.homeTeam, .awayTeam{
     
     // float: left;
     // left: 100px;
@@ -16,156 +16,147 @@
 #awayTeam{
     // right: 100px;
     // float: right
-    margin-top: 320px;
-    margin-left:-205px;
+    // margin-top: 320px;
+    // margin-left:-205px;
     border: 2px solid red;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    // border: 3px solid green;
-  }
+.football {
+  width: 17px;
+  height: auto;
+}
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    // border: 3px solid green;
-  }
-
-  #dash{
-    // width:100%;
-    float: left;
-    justify-content: center;
-    border: 3px solid red;
-  }
-
-  #left{
-    float: left;
-    border: 3px solid green;
-  }
-
-//   .result {
+// .button {
 //     // display: flex;
-//     // height: 100px;
+//     // justify-content: center;
+//     // align-items: center;
+//     // height: 200px;
+//     // border: 3px solid green;
+//   }
+
+
+//   #dash{
+//     // width:100%;
+//     float: left;
+//     justify-content: center;
+//     border: 3px solid red;
+//   }
+
+//   #left{
+//     float: left;
 //     border: 3px solid green;
 //   }
 
-  .scorers{
-    // display: flex;  //this puts the items in the middle
-    // justify-content: center;
-    margin-top:20px;
+// //   .result {
+// //     // display: flex;
+// //     // height: 100px;
+// //     border: 3px solid green;
+// //   }
 
-    // text-align: center;
+//   .scorers{
+//     // display: flex;  //this puts the items in the middle
+//     // justify-content: center;
+//     margin-top:20px;
 
-  }
+//     // text-align: center;
 
-
-  .homescorers{
-    border: 2px solid red;
-    // text-align: right;
-
-    display: inline-block;
-  }
-
-  .awayscorers{
-    border: 2px solid green;
-    // display: flex;
-    // text-align: right;
-
-    display: inline-block ;
-  }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
-    display: inline-block;
-    *display: inline;
-    
-}
-  .playanddisplay{
-    font-size: larger;
-    position:relative;
-    // top:150px;
-  }
-
-  .football {
-    width: 17px;
-    height: auto;
-}
+//   }
 
 
-// .container {
-//     display: grid;
-//     grid-template-columns: auto auto auto;
-//     justify-items: center;
-//     // width: 40%;
-//     // column-gap: 10px; 
-//     // grid-gap: 1px;
+//   .homescorers{
+//     border: 2px solid red;
+//     // text-align: right;
+
+//     display: inline-block;
+//   }
+
+//   .awayscorers{
 //     border: 2px solid green;
+//     // display: flex;
+//     // text-align: right;
+
+//     display: inline-block ;
 //   }
 
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center
-}
-
-//   .container > * {
-//      /* Adjust the value to control the spacing */
+// ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+    
+//     display: inline-block;
+//     *display: inline;
+    
+// }
+//   .playanddisplay{
+//     font-size: larger;
+//     position:relative;
+//     // top:150px;
 //   }
 
-  .left-scorer{
-    border: 2px solid red;
-    // margin-left: 40px;
-  }
-
-  .right-scorer{
-    border: 2px solid red;
-  }
-
-  .center-scorer{
-    border: 2px solid red;
-    justify-items: center;
-  }
 
 
-.title2 {
-    // bottom: 4000px;
-    height: 30px;
-    width: 600px;
-    /* for example */
-    margin: 0 auto;
-    text-align: center;
-}
-.container2 {
-    display: inline-block;
-    margin: 0 auto;
-    position: relative;
-    text-align: left;
-}
-.center2 {
-}
-.left2, .right2 {
-    position: absolute;
-    top: 0px;
-    width: 200px;
-}
-.left2 {
-    right: 100%;
-    text-align: right;
-}
-.right2 {
-    left: 100%;
-}
 
-// .title2{
-//     float: right;
+// // .container {
+// //     display: grid;
+// //     grid-template-columns: auto auto auto;
+// //     justify-items: center;
+// //     // width: 40%;
+// //     // column-gap: 10px; 
+// //     // grid-gap: 1px;
+// //     border: 2px solid green;
+// //   }
+
+// .container{
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: center
+// }
+
+// //   .container > * {
+// //      /* Adjust the value to control the spacing */
+// //   }
+
+//   .left-scorer{
+//     border: 2px solid red;
+//     // margin-left: 40px;
+//   }
+
+//   .right-scorer{
+//     border: 2px solid red;
+//   }
+
+//   .center-scorer{
+//     border: 2px solid red;
+//     justify-items: center;
+//   }
+
+
+// .title2 {
+//     // bottom: 4000px;
+//     height: 30px;
+//     width: 600px;
+//     /* for example */
+//     margin: 0 auto;
+//     text-align: center;
+// }
+// .container2 {
+//     display: inline-block;
+//     margin: 0 auto;
+//     position: relative;
+//     text-align: left;
+// }
+// .center2 {
+// }
+// .left2, .right2 {
+//     position: absolute;
+//     top: 0px;
+//     width: 200px;
+// }
+// .left2 {
+//     right: 100%;
+//     text-align: right;
+// }
+// .right2 {
+//     left: 100%;
 // }

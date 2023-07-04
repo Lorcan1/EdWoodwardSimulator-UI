@@ -1,31 +1,79 @@
-<div class="tables" id = "homeTeam">
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Names</th>
-    <th>Potential</th>
-  </tr>
-    <tr *ngFor="let player of homeTeam">
-      <td>{{player.startingPosition}}</td>
-      <td>{{player.lastName}}</td>
-      <td>{{player.potential}}</td>
-    </tr>
-  </table>
+<div class = "row" style="scroll-margin-top: 174px;">
+<div class="col-md-9">
+<!-- <div class="title2"> -->
+  <div class="d-flex text-center">
+
+  <!-- <div class="container2"> -->
+    <div class="mx-auto flex-shrink-0 mb-2">
+      <div class = "d-none d-md-block">
+        <h2 class = "mb-1">
+      <span class = left2>{{scorers.homeTeam}} {{scorers.homeTeamScore}}</span>
+      <span class="center2">-</span>
+      <span class = right2>{{scorers.awayTeamScore}} {{scorers.awayTeam}}</span>
+    </h2>
+      </div>
+  </div>
 </div>
-<div class = "tables" id = "awayTeam">
+
+
+<!-- <div class = scorers> -->
+<div class = "d-flex align-items-center justify-content-center">
+<div class="d-sm-flex">
+<div class = "mx-xs-auto text-center">
+<table class = "table table-sm mb-2 mb-sm-0">
+  <tr *ngFor="let row of scorers.Scorer">
+    <div *ngIf="(row.team) =='home'">
+           {{ row.name }} 
+          {{ row.goals }}
+          <img class = football [src]="'/assets/football.png'"/> 
+          </div> 
+      </tr>  
+</table>
+</div>
+<div class="ms-4 mx-xs-auto d-sm-inline-block text-center">
+<table class = "table table-sm mb-2 mb-sm-0">
+  <tr *ngFor="let row of scorers.Scorer">
+    <div  *ngIf="(row.team) =='away'">
+          <td> {{ row.name }} </td>
+          <td> {{ row.goals }}</td>
+          <td><img class = football [src]="'/assets/football.png'"/> </td>
+          </div> 
+      </tr>  
+</table>
+</div>
+</div>
+</div>
+
+  <div class = 'homeTeam'>
   <table>
     <tr>
       <th>Position</th>
       <th>Names</th>
       <th>Potential</th>
     </tr>
-      <tr *ngFor="let player of awayTeam">
+      <tr *ngFor="let player of homeTeam">
         <td>{{player.startingPosition}}</td>
         <td>{{player.lastName}}</td>
         <td>{{player.potential}}</td>
       </tr>
     </table>
-  </div>
+
+  <div class = "awayTeam">
+    <table>
+      <tr>
+        <th>Position</th>
+        <th>Names</th>
+        <th>Potential</th>
+      </tr>
+        <tr *ngFor="let player of awayTeam">
+          <td>{{player.startingPosition}}</td>
+          <td>{{player.lastName}}</td>
+          <td>{{player.potential}}</td>
+        </tr>
+      </table>
+    </div>
+
+</div>
 
   
 
@@ -37,42 +85,15 @@
   <div class="right-scorer">{{scorers.awayTeamScore}} {{scorers.awayTeam}}</div>
 </div> -->
 
-<div class="title2">
-  <div class="container2">
-      <div class = left2>{{scorers.homeTeam}} {{scorers.homeTeamScore}}</div>
-      <div class="center2">-</div>
-      <div class = right2>{{scorers.awayTeamScore}} {{scorers.awayTeam}}</div>
+
+</div>
+<div class="col-md-3">
+  <div class = button>
+    <button (click)="getAll()" mat-fab extended>
+      <mat-icon>Play</mat-icon>
+    </button>
   </div>
-
-
-
-<div class = scorers>
-<table class = "homescorers">
-  <tr *ngFor="let row of scorers.Scorer">
-    <div *ngIf="(row.team) =='home'">
-           {{ row.name }} 
-          {{ row.goals }}
-          <img class = football [src]="'/assets/football.png'"/> 
-          </div> 
-      </tr>  
-</table>
-
-<table class = "awayscorers">
-  <tr *ngFor="let row of scorers.Scorer">
-    <div  *ngIf="(row.team) =='away'">
-          <td> {{ row.name }} </td>
-          <td> {{ row.goals }}</td>
-          <td><img class = football [src]="'/assets/football.png'"/> </td>
-          </div> 
-      </tr>  
-</table>
 </div>
-</div>
-
-<div class = button>
-  <button (click)="getAll()" mat-fab extended>
-    <mat-icon>Play</mat-icon>
-  </button>
 </div>
 
 
