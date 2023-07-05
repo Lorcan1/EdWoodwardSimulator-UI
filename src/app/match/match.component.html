@@ -16,7 +16,7 @@
 </div>
 
 
-<!-- <div class = scorers> -->
+<div class = scorers>
 <div class = "d-flex align-items-center justify-content-center">
 <div class="d-sm-flex">
 <div class = "mx-xs-auto text-center">
@@ -43,32 +43,101 @@
 </div>
 </div>
 </div>
+</div>
 
-  <div class = 'homeTeam'>
-  <table>
+
+<div class = 'teamStats'>
+  <div class = "d-flex align-items-center justify-content-center">
+    <div class="d-sm-flex">
+      <div class = "mx-xs-auto text-center">
+  <table class="table table-sm mb-2 mb-sm-0">
     <tr>
-      <th>Position</th>
-      <th>Names</th>
-      <th>Potential</th>
+      <th></th>
+      <th></th>
+      <th>P</th>
+      <th>Sh</th>
+      <th>On T</th>
+    </tr>
+      <tr>
+        <td>THFC</td>
+        <td></td>
+        <td>50</td>
+        <td>4</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>MCFC</td>
+        <td></td>
+        <td>50</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+  <div class = 'playerStats'>
+  <table class="table table-striped table-borderless table-sm table-hover">
+    <tr>
+      <th>Pos</th>
+      <th>Name</th>
+      <th>SH</th>  
+      <th>On T</th>
+      <th>KCC</th>
+      <th>G</th>
+      <th>xG</th>
+      <th>A</th>
+      <th>xA</th>
+      <th>KP</th>
+      <th>P </th> 
+      <th>T</th>
+      <th>P %</th>
+      <th>TKL</th>
+      <th>CND</th>
+      <th>CRD</th>
+      <th>BKS</th>
+      <th>DRB</th>
+      <th>RTG</th>
+  
     </tr>
       <tr *ngFor="let player of homeTeam">
         <td>{{player.startingPosition}}</td>
         <td>{{player.lastName}}</td>
-        <td>{{player.potential}}</td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
 
+
   <div class = "awayTeam">
-    <table>
+    <table  class="table table-striped table-borderless table-sm table-hover">
       <tr>
-        <th>Position</th>
-        <th>Names</th>
-        <th>Potential</th>
+        <th>Pos</th>
+        <th>Name</th>
+        <th>SH</th>  
+        <th>On T</th>
+        <th>KCC</th>
+        <th>G</th>
+        <th>xG</th>
+        <th>A</th>
+        <th>xA</th>
+        <th>KP</th>
+        <th>P </th> 
+        <th>T</th>
+        <th>P %</th>
+        <th>TKL</th>
+        <th>CND</th>
+        <th>CRD</th>
+        <th>BKS</th>
+        <th>DRB</th>
+        <th>RTG</th>
       </tr>
         <tr *ngFor="let player of awayTeam">
           <td>{{player.startingPosition}}</td>
           <td>{{player.lastName}}</td>
-          <td>{{player.potential}}</td>
+          <td></td>
         </tr>
       </table>
     </div>
@@ -90,10 +159,10 @@
 <div class="col-md-3">
   <div class="d-none d-md-flex align-items-center mb-3">
     <div class="btn-group me-2">
-    <button class="btn btn-light-bordered" (click)="getAll()" mat-fab extended>
+    <button class="btn btn-outline-dark" (click)="getAll()" mat-fab extended>
       <span class="glyphicon glyphicon-play">Play</span>
     </button>
-    <button class="btn btn-light-bordered">
+    <button class="btn btn-outline-dark">
       <span>Next</span>
     </button>
     <div class="dropdown">
@@ -107,6 +176,8 @@
     </div>
 
   </div>
+  <input type="range" class="form-range flex-grow-1" min="1" max="33" step="1" title="Speed" value="1">
+
 </div>
 <div class="live-game-playbyplay" style="scroll-margin-top: 174px; height: 601px;">
 Hello</div>
