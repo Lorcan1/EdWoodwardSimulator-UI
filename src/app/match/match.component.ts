@@ -31,6 +31,7 @@ public scorers:any = ""
     'ST':10
   };
   public homeScorers:String[]
+  public players:any = []
 
   constructor(private http: HttpClient) { }
 
@@ -64,6 +65,15 @@ public scorers:any = ""
         this.awayTeam.sort((a, b) => this.ref[a.startingPosition] - this.ref[b.startingPosition])
       )
     });
+
+  const playerInGame= 'http://localhost:8080/processMatch'
+  this.http.get(playerInGame).subscribe((res)=>{
+    // this.data = Object.values(res)
+    this.players = res
+    console.log("here",this.players)
+    console.log(typeof this.players)
+  });
+
 
 }
 }
