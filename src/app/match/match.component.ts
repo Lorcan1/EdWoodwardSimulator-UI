@@ -14,6 +14,9 @@ export class MatchComponent implements OnInit {
 ];
 
 public scorers:any = ""
+public test:any = ""
+public key:any = []
+public latest:any=[]
 
   public homeTeam:any = []
   public awayTeam:any = []
@@ -33,20 +36,34 @@ public scorers:any = ""
   public homeScorers:String[]
   public players:any = []
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+   }
 
   getAll() {
-    const resultUrl ='http://localhost:8080/return-result'
+    const resultUrl ='http://localhost:8080/test-pbp'
+    this.http.get(resultUrl).subscribe((res)=>{
+      // this.data = Object.values(res)
+      this.test = res
+      console.log("test",this.test)
+      console.log("test2",this.test.key)
+      this.key.push(this.test.key)
+      console.log("test3",this.key)
+      
+    });
+  
+  
+  }
+
+
+  ngOnInit(): void {
+
+      const resultUrl ='http://localhost:8080/return-result'
     this.http.get(resultUrl).subscribe((res)=>{
       // this.data = Object.values(res)
       this.scorers = res
       console.log("scorers",this.scorers)
       // this.homeScorers= this.result.homeScorers
-
-    });
-  }
-
-  ngOnInit(): void {
+    })
     const homeUrl ='http://localhost:8080/get-positions?club=MCFC';
     this.http.get(homeUrl).subscribe((res)=>{
       // this.data = Object.values(res)

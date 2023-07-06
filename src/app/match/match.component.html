@@ -114,27 +114,29 @@ Time
     </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let player of homeTeam">
-        <td>{{player.startingPosition}}</td>
-        <td>{{player.lastName}}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
+        <ng-container *ngFor="let player of players">
+          <tr *ngIf="player.home===true">
+            <td>{{player.pos}}</td>
+            <td>{{player.name}}</td>
+            <td>{{player.shots}}</td>
+            <td>{{player.onTarget}}</td>
+            <td>{{player.keyChancesCreated}}</td>
+            <td>{{player.goals}}</td>
+            <td>{{player.expGoals}}</td>
+            <td>{{player.assists}}</td>
+            <td>{{player.excpectedAssists}}</td>
+            <td>{{player.keyPasses}}</td>
+            <td>{{player.passes}}</td>
+            <td>{{player.touches}}</td>
+            <td>{{player.passCompletionPercentage}}</td>
+            <td>{{player.tackles}}</td>
+            <td>{{player.condition}}</td>
+            <td>{{player.card}}</td>
+            <td>{{player.blocks}}</td>
+            <td>{{player.dribbles}}</td>
+            <td>{{player.rating}}</td>
       </tr>
+    </ng-container>
     </tbody>
     <tfoot>
       <tr>
@@ -204,27 +206,29 @@ Time
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let player of players">
+      <ng-container *ngFor="let player of players">
+        <tr *ngIf="player.home===false">
           <td>{{player.pos}}</td>
           <td>{{player.name}}</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
+          <td>{{player.shots}}</td>
+          <td>{{player.onTarget}}</td>
+          <td>{{player.keyChancesCreated}}</td>
+          <td>{{player.goals}}</td>
+          <td>{{player.expGoals}}</td>
+          <td>{{player.assists}}</td>
+          <td>{{player.excpectedAssists}}</td>
+          <td>{{player.keyPasses}}</td>
+          <td>{{player.passes}}</td>
+          <td>{{player.touches}}</td>
+          <td>{{player.passCompletionPercentage}}</td>
+          <td>{{player.tackles}}</td>
+          <td>{{player.condition}}</td>
+          <td>{{player.card}}</td>
+          <td>{{player.blocks}}</td>
+          <td>{{player.dribbles}}</td>
+          <td>{{player.rating}}</td>
         </tr>
+      </ng-container>
       </tbody>
       <tfoot>
         <tr>
@@ -305,8 +309,12 @@ Time
   <input type="range" class="form-range flex-grow-1" min="1" max="33" step="1" title="Speed" value="1">
 
 </div>
-<div class="live-game-playbyplay" style="scroll-margin-top: 174px; height: 601px;">
-Hello</div>
+<div class="overflow-auto" style="scroll-margin-top: 174px; height: 601px;">
+<div *ngFor="let row of key" >
+  {{row}}
+
+</div>
+</div>
 </div>
 
 
