@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+import data from './defaultStats.json';
+
 @Component({
   selector: 'app-match',
   templateUrl: './match.component.html',
@@ -17,6 +19,7 @@ public scorers:any = ""
 public test:any = ""
 public key:any = []
 public latest:any=[]
+public players:any= data
 
   public homeTeam:any = []
   public awayTeam:any = []
@@ -34,7 +37,7 @@ public latest:any=[]
     'ST':10
   };
   public homeScorers:String[]
-  public players:any = []
+ 
 
   constructor(private http: HttpClient) {
    }
@@ -50,12 +53,28 @@ public latest:any=[]
       console.log("test3",this.key)
       
     });
+
+    const playerInGame= 'http://localhost:8080/processMatch'
+    this.http.get(playerInGame).subscribe((res)=>{
+    // this.data = Object.values(res)
+    this.players = res
+    console.log("here",this.players)
+    console.log(typeof this.players)
+    // this.players = this.players.players
+    console.log("ugh", this.players.players)
+    console.log("Array?",typeof this.players.players)
+  });
   
   
   }
 
 
   ngOnInit(): void {
+    this.players = data
+    console.log("wahey",this.players)
+    console.log("waheyb", typeof this.players)
+    console.log("wahey2",this.players.players)
+    console.log("wahey2b",typeof this.players.players)
 
       const resultUrl ='http://localhost:8080/return-result'
     this.http.get(resultUrl).subscribe((res)=>{
@@ -82,15 +101,5 @@ public latest:any=[]
         this.awayTeam.sort((a, b) => this.ref[a.startingPosition] - this.ref[b.startingPosition])
       )
     });
-
-  const playerInGame= 'http://localhost:8080/processMatch'
-  this.http.get(playerInGame).subscribe((res)=>{
-    // this.data = Object.values(res)
-    this.players = res
-    console.log("here",this.players)
-    console.log(typeof this.players)
-  });
-
-
 }
 }

@@ -70,16 +70,18 @@ Time
       <tr>
         <td>THFC</td>
         <td></td>
-        <td>50</td>
-        <td>4</td>
-        <td>2</td>
+        <td>{{players.match.homePoss}}</td>
+        <td>{{players.match.homeShots}}</td>
+        <td>{{players.match.homeShotsOnT}}</td>
+        <td>{{players.match.homexG}}</td>
       </tr>
       <tr>
         <td>MCFC</td>
         <td></td>
-        <td>50</td>
-        <td>4</td>
-        <td>4</td>
+        <td>{{players.match.awayPoss}}</td>
+        <td>{{players.match.awayShots}}</td>
+        <td>{{players.match.awayShotsOnT}}</td>
+        <td>{{players.match.awayxG}}</td>
       </tr>
     </tbody>
     </table>
@@ -114,7 +116,7 @@ Time
     </tr>
   </thead>
   <tbody>
-        <ng-container *ngFor="let player of players">
+        <ng-container *ngFor="let player of players.players">
           <tr *ngIf="player.home===true">
             <td>{{player.pos}}</td>
             <td>{{player.name}}</td>
@@ -206,7 +208,7 @@ Time
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let player of players">
+      <ng-container *ngFor="let player of players.players">
         <tr *ngIf="player.home===false">
           <td>{{player.pos}}</td>
           <td>{{player.name}}</td>
@@ -274,17 +276,11 @@ Time
 
 </div>
 
-  
-
-
-
 <!-- <div class="container">
   <div class="left-scorer">{{scorers.homeTeam}} {{scorers.homeTeamScore}}</div>
   <div class="center-scorer">-</div>
   <div class="right-scorer">{{scorers.awayTeamScore}} {{scorers.awayTeam}}</div>
 </div> -->
-
-
 </div>
 <div class="col-md-3">
   <div class="d-none d-md-flex align-items-center mb-3">
